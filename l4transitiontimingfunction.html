@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transition Timing Function</title>
+    </head>
+
+    <style type="text/css">
+        .container{
+            width: 1000px;
+            background-color: grey;
+        }
+
+        .container .move{
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+
+            text-align: center;
+            line-height: 50px;
+
+            margin: 20px;
+
+            transition-property: transform;
+            transition-duration: 3s;
+        }
+
+        .container .move:hover{
+            transform: translate(850px);
+        }
+
+        #ease{
+            transition-timing-function: ease;
+        }
+
+        #easein{
+            transition-timing-function: ease-in;
+        }
+
+        #easeout{
+            transition-timing-function: ease-out;
+        }
+
+        #easeinout{
+            transition-timing-function: ease-in-out;
+        }
+
+        #linear{
+            transition-timing-function: linear;
+        }
+
+        #cubicbezier{
+            /* there are fout parameter in cubic-bezier(p0,p1,p2,p3) point value is between 0 to 1*/
+            /* p0 is the initial state and p3 is final state 
+            p1 and p3 are for curve
+            */
+            /* 0 to 1 is slower to faster */
+            transition-timing-function: cubic-bezier(0.6,1,1,1);
+        }
+
+    </style>
+
+    <body>
+        <div class="container">
+            <div id="ease" class="move">Ease</div>
+        </div>
+
+        <div class="container">
+            <div id="easein" class="move">Ease-in</div>
+        </div>
+
+        <div class="container">
+            <div id="easeout" class="move">Ease-out</div>
+        </div>
+
+        <div class="container">
+            <div id="easeinout" class="move">Ease-in-out</div>
+        </div>
+
+        <div class="container">
+            <div id="linear" class="move">Liner</div>
+        </div>
+
+        <div class="container">
+            <div id="cubicbezier" class="move">Cubic-Bezier</div>
+        </div>
+    </body>
+</html>
+
+<!--
+Use with transition,there are six transition timing function
+
+ease: နှေးမြန်နှေး
+ease-in: နှေးမြန်
+ease-out: မြန်နှေး
+ease-in-out: နှေးမြန်နှေး
+linear: အချိုးကျသွားတယ်
+cubic-bezier:
+-->

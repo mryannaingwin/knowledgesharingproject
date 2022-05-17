@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transfrom With Scale</title>
+    </head>
+    
+    <style type="text/css">
+        .container{
+            width: 1000px;
+            background:grey;
+        }
+
+        .container .move{
+            width: 150px;
+            height: 60px;
+            background: red;
+            color: white;
+            font-size: 20px;
+
+            margin: 20px 0;
+
+            text-align:center;
+            line-height: 60px;
+        }
+
+        #scale:hover{
+            /*  0 to 1.
+                1 is always default
+                0 ဆိုပျောက်သွားမယ်။
+                1 ကတော့ default။
+                2 ဆို ၂ဆ ကြီးလာမယ်။
+
+                Use to control size
+            */
+            /* transform:scale(0); */
+            /* transform:scale(1); */
+            /* transform: scale(2); */
+            transform:scale(0.5);
+
+        }
+
+        #scalexy:hover{
+            /* scale(x value,y value) */
+            /* transform: scale(0.3,0.9); */
+            transform: scale(2,3);
+        }
+
+        #scalex:hover{
+            /* for leftright */
+            transform: scalex(3);
+        }
+
+        #scaley:hover{
+            /* for topbottom */
+            transform: scaley(3);
+        }
+
+        img{
+            width: 300px;
+            
+            display: block;
+            margin: auto;
+        }
+
+        img:hover{
+            /* transform: scale(0.5); */
+            /* transform: scale(2); */
+            /* transform: scale(2,3); */
+            /* transform: scaleX(0.5); */
+            transform: scaleY(0.5);
+        }
+    </style>
+
+    <body>
+        
+        <div class="container">
+            <div id="scale" class="move">Scale Me</div>
+        </div>
+
+        <div class="container">
+            <div id="scalexy" class="move">Scale X,Y</div>
+        </div>
+
+        <div class="container">
+            <div id="scalex" class="move">Scale X</div>
+        </div>
+
+        <div class="container">
+            <div id="scaley" class="move">Scale Y</div>
+        </div>
+
+        <hr>
+
+        <div>
+            <img src="./img/dog.jpg" alt="dog">
+        </div>
+
+    </body>
+</html>
+
+<!-- scale()
+scale(x,y)
+scale(x)
+scale(y)
+
+-->
